@@ -15,6 +15,7 @@ import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.put;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.delete;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
@@ -99,6 +100,17 @@ public class ExpenseControllerTest {
         verify(expenseDAO, times(1)).update(updateExpense, expenseId);
         String contentAsString = result.getResponse().getContentAsString();
         System.out.println(contentAsString);
+    }
+
+    @Test
+    public void deleteExpenseTest() throws Exception {
+        int expenseId = 1;
+        when(expenseDAO.delete(expenseId)).thenReturn(null);
+
+        mockMvc.perform(delete("/api/expense/" + expenseId))
+                .andExpect(status().isOk());
+
+        verify(expenseDAO, times(1)).delete(expenseId);
     }
 
 }

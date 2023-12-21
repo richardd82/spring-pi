@@ -52,6 +52,12 @@ public class ExpenseController {
         return ResponseEntity.ok(expenseDTO);
     }
 
+    @DeleteMapping("/{id}")
+    public ResponseEntity<String> deleteExpense(@PathVariable Integer id) {
+        expenseDAO.delete(id);
+        System.out.println("Deleted expense with id: " + id + " successfully.");
+        return ResponseEntity.ok("Deleted expense with id: " + id + " successfully.");
+    }
 
 
 }
