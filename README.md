@@ -15,20 +15,20 @@ Las ubicaciones de los scripts y las colecciones son las siguientes:
 
 Las colecciones de Insomnia se muestran a continuación:
 
-1. [Agregar Gasto](ScriptS&Json/assets/addExpenses.png)
-2. [Agregar Categorías de Gastos](ScriptS&Json/assets/addExpensesCategories.png)
+1. [Agregar Gasto](Scripts&Json/assets/addExpenses.png)
+2. [Agregar Categorías de Gastos](Scripts&Json/assets/addExpensesCategories.png)
 
 ## Excepciones
 
 Las excepciones en este proyecto se encuentran en los siguientes archivos:
 
-![Excepciones](ScriptS&Json/assets/exceptions.png)
+![Excepciones](Scripts&Json/assets/exceptions.png)
 
 ## Pruebas
 
 Se incluyen pruebas indicadas en la siguiente imagen, las cuales se pueden ejecutar desde la clase principal de las pruebas `PiJavaApplicationTests`:
 
-![Pruebas Pasadas](ScriptS&Json/assets/testsPassed.png)
+![Pruebas Pasadas](Scripts&Json/assets/testsPassed.png)
 
 ¡Muchas gracias! 🙌
 
