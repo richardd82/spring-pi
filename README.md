@@ -10,7 +10,7 @@ Para poder interactuar con la base de datos, es necesario crear una DB de nombre
 
 Las ubicaciones de los scripts y las colecciones son las siguientes:
 
-![Scripts](../ScriptS&Json/assets/scripts.png)
+![Texto alternativo](ScriptS&Json/assets/scripts.png)
 
 ## Colecciones de Insomnia
 
