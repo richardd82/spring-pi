@@ -26,9 +26,10 @@ public class ExpenseCategoryDTO implements Comparable<ExpenseCategoryDTO> {
         return categoryName;
     }
 
-    public void setCategoryName(String categoryName) {
+    public String setCategoryName(String categoryName) {
 
         this.categoryName = categoryName;
+        return categoryName;
     }
     @Override
     public int compareTo(ExpenseCategoryDTO oC) {

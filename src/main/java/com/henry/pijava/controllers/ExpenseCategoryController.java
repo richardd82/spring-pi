@@ -6,6 +6,7 @@ import com.henry.pijava.dto.ExpenseCategoryDTO;
 import com.henry.pijava.services.ExpenseCategoryDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.http.converter.HttpMessageNotReadableException;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.*;
 
@@ -56,5 +57,8 @@ public class ExpenseCategoryController {
         return ResponseEntity.ok(id);
     }
 
-    // ... Métodos POST, PUT, DELETE
+    @ExceptionHandler(HttpMessageNotReadableException.class)
+    public ResponseEntity<String> handleJsonParseException(HttpMessageNotReadableException e) {
+        return ResponseEntity.badRequest().body("Error en el formato de los datos enviados: " + e.getMessage());
+    }
 }

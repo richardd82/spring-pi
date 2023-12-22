@@ -3,9 +3,12 @@ package com.henry.pijava.controllers;
 
 
 import com.henry.pijava.dto.ExpenseDTO;
+import com.henry.pijava.exceptions.ExpenseInsertException;
 import com.henry.pijava.services.ExpenseDAO;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.http.converter.HttpMessageNotReadableException;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.*;
 
@@ -58,6 +61,13 @@ public class ExpenseController {
         System.out.println("Deleted expense with id: " + id + " successfully.");
         return ResponseEntity.ok("Deleted expense with id: " + id + " successfully.");
     }
-
+    @ExceptionHandler(HttpMessageNotReadableException.class)
+    public ResponseEntity<String> handleJsonParseException(HttpMessageNotReadableException e) {
+        return ResponseEntity.badRequest().body("Error en el formato de los datos enviados: " + e.getMessage());
+    }
+    @ExceptionHandler(ExpenseInsertException.class)
+    public ResponseEntity<String> handleExpenseInsertException(ExpenseInsertException e) {
+        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(e.getMessage());
+    }
 
 }

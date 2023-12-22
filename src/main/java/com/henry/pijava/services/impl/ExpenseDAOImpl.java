@@ -2,8 +2,8 @@ package com.henry.pijava.services.impl;
 
 import com.henry.pijava.Connections.ConnDB;
 import com.henry.pijava.dto.ExpenseDTO;
+import com.henry.pijava.exceptions.ExpenseInsertException;
 import com.henry.pijava.services.ExpenseDAO;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import java.sql.*;
@@ -143,7 +143,7 @@ public class ExpenseDAOImpl implements ExpenseDAO {
             System.out.println("Gasto insertado correctamente en la base de datos.");
 
         } catch (SQLException ex) {
-            throw new RuntimeException("Error al insertar el gasto en la base de datos.", ex);
+            throw new ExpenseInsertException("Error al insertar el gasto en la base de datos.", ex);
         } finally {
             // Cierra recursos
             if (preparedStatement != null) {

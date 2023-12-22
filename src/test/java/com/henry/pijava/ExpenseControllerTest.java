@@ -1,7 +1,9 @@
 package com.henry.pijava;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.henry.pijava.controllers.ExpenseController;
 import com.henry.pijava.dto.ExpenseDTO;
+import com.henry.pijava.exceptions.ExpenseInsertException;
 import com.henry.pijava.services.ExpenseDAO;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -9,6 +11,7 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
+import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
@@ -20,6 +23,8 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 import static org.mockito.Mockito.*;
+
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -112,5 +117,4 @@ public class ExpenseControllerTest {
 
         verify(expenseDAO, times(1)).delete(expenseId);
     }
-
 }
