@@ -1,6 +1,8 @@
 # PROYECTO INTEGRADOR - UPSKILLING JAVA
 
-# Guía de Uso - Base de Datos de Gastos
+# Guía de Uso 
+
+# Base de Datos de Gastos
 
 Para poder interactuar con la base de datos, es necesario crear una DB de nombre `expenseDB` con la siguiente URL: `"jdbc:h2:tcp://localhost/~/expensDB"`. Una vez creada esta base de datos, podemos crear las tablas utilizando los scripts SQL en el archivo `CreateTables-PI-JAVA.sql`.
 
@@ -8,7 +10,7 @@ Para poder interactuar con la base de datos, es necesario crear una DB de nombre
 
 Las ubicaciones de los scripts y las colecciones son las siguientes:
 
-![Scripts](/ScriptS&Json/assets/scripts.png)
+![Scripts](../ScriptS&Json/assets/scripts.png)
 
 ## Colecciones de Insomnia
 
