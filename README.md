@@ -8,13 +8,14 @@ Para poder interactuar con la base de datos, es necesario crear una DB de nombre
 
 Las ubicaciones de los scripts y las colecciones son las siguientes:
 
-![Scripts](/ScriptS&Json/assets/scripts.png)
+<!--![Scripts](/ScriptS&Json/assets/scripts.png)-->
+<img src="Scripts&Json/assets/scripts.png" alt="Scripts" width="25%">
 
 ## Colecciones de Insomnia
 
 Las colecciones de Insomnia se muestran a continuación:
 
-1. [Agregar Gasto](ScriptS&Json/assets/addExpense.png)
+1. [Agregar Gasto](ScriptS&Json/assets/addExpenses.png)
 2. [Agregar Categorías de Gastos](ScriptS&Json/assets/addExpensesCategories.png)
 
 ## Excepciones
@@ -32,5 +33,4 @@ Se incluyen pruebas indicadas en la siguiente imagen, las cuales se pueden ejecu
 ¡Muchas gracias! 🙌
 
 ---
-
 Creado por Ricardo Díaz 😎 - Diciembre 2023
